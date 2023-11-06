@@ -2,11 +2,11 @@ import { Dimensions, StyleSheet, Image } from 'react-native';
 import top from '../../../../assets/top.png'
 import Content from '../../../components/Content';
 const width = Dimensions.get('screen').width
-export default function Top() {
+export default function Top({ title }) {
     return (
         <>
             <Image source={top} style={styles.top} />
-            <Content style={styles.title}>Detalhes da Cesta</Content>
+            <Content style={styles.title}>{title}</Content>
         </>
     )
 }

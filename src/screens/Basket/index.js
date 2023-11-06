@@ -2,11 +2,11 @@ import { StyleSheet, View } from 'react-native';
 
 import Top from './Components/Top';
 import Details from './Components/Details';
-export default function Basket() {
+export default function Basket({ top, details }) {
     return <>
-        <Top />
+        <Top {...top} />
         <View style={styles.bucket}>
-            <Details />
+            <Details {...details} />
         </View>
     </>
 }

@@ -1,18 +1,20 @@
-import { StyleSheet, Image, Text, View } from 'react-native';
+import { StyleSheet, Image, View } from 'react-native';
 import logo from '../../../../assets/logo.png'
+import Content from '../../../components/Content'
+
 
 export default function Details() {
     return (
         <>
-            <Text style={styles.name}>Cesta de Verduras</Text>
+            <Content style={styles.name}>Cesta de Verduras</Content>
             <View style={styles.boxFarm}>
                 <Image source={logo} style={styles.imageFarm} />
-                <Text style={styles.farm}>Jenny Jack Farm</Text>
+                <Content style={styles.farm}>Jenny Jack Farm</Content>
             </View>
-            <Text style={styles.description}>Uma cesta com produtos selecionados
+            <Content style={styles.description}>Uma cesta com produtos selecionados
                 cuidadosamente da fazenda
-                para sua cozinha</Text>
-            <Text style={styles.price}>R$ 40,00</Text>
+                para sua cozinha</Content>
+            <Content style={styles.price}>R$ 40,00</Content>
         </>
     )
 }
@@ -22,13 +24,12 @@ const styles = StyleSheet.create({
         color: '#464646',
         fontSize: 26,
         lineHeight: 42,
-        fontFamily: 'MontserratBold'
+        fontWeight: 'bold'
     },
     farm: {
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: 'MontserratRegular'
     },
     imageFarm: {
         width: 32,

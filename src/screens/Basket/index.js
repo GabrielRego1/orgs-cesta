@@ -1,14 +1,16 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
 import Top from './Components/Top';
 import Details from './Components/Details';
-export default function Basket({ top, details }) {
-    return <>
+import Itens from './Components/Itens';
+export default function Basket({ top, details, itens }) {
+    return <ScrollView>
         <Top {...top} />
         <View style={styles.bucket}>
             <Details {...details} />
+            <Itens {...itens} />
         </View>
-    </>
+    </ScrollView>
 }
 
 const styles = StyleSheet.create({

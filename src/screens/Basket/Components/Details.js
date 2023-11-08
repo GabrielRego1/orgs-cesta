@@ -1,8 +1,9 @@
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, Image, View, TouchableOpacity } from 'react-native';
 import Content from '../../../components/Content'
+import { } from 'react-native-web';
 
 
-export default function Details({ name,logo,farmName,description,price }) {
+export default function Details({ name, logo, farmName, description, price, buttonText }) {
     return (
         <>
             <Content style={styles.name}>{name}</Content>
@@ -12,6 +13,10 @@ export default function Details({ name,logo,farmName,description,price }) {
             </View>
             <Content style={styles.description}>{description}</Content>
             <Content style={styles.price}>{price}</Content>
+
+            <TouchableOpacity style={styles.button}>
+                <Content style={styles.textButton}>{buttonText}</Content>
+            </TouchableOpacity>
         </>
     )
 }
@@ -47,5 +52,18 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
+    },
+    button: {
+        marginTop: 16,
+        backgroundColor: '#2A9F85',
+        paddingVertical: 16,
+        borderRadius: 6
+    },
+    textButton: {
+        textAlign: 'center',
+        color:'#fff',
+        fontSize:16,
+        lineHeight:26,
+        fontWeight:'bold'
     }
 })

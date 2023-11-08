@@ -19,7 +19,7 @@ export default function App() {
     return <View><Text>Carregando fontes...</Text></View>;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar />
       <Basket {...mock} />
     </SafeAreaView>

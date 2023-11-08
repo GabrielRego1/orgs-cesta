@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#ECECEC',
         paddingVertical: 16,
+        marginHorizontal: 16,
         alignItems: 'center'
     },
     image: {
@@ -41,6 +42,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 11,
-        color:'#464646'
+        color: '#464646'
     }
 })
